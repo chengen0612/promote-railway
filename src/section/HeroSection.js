@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import { breakpoints } from "../styles/theme";
+
 import horizaontal from "../assets/horizontal.jpg";
 import vertical from "../assets/vertical.jpg";
 import sloganLg from "../assets/asset2.svg";
@@ -9,7 +11,8 @@ import illustration01 from "../assets/illustration01.png";
 import ScrollSign from "../components/ScrollSign";
 
 const Main = styled.main`
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   max-width: 1360px;
@@ -17,27 +20,25 @@ const Main = styled.main`
 `;
 
 const ImageWrapper = styled.div`
-  aspect-ratio: 16 / 9;
-  background-image: url(${horizaontal});
+  aspect-ratio: 5/ 7;
+  background-image: url(${vertical});
   background-size: cover;
   border-radius: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: ${breakpoints.md}) {
-    max-height: 90vh;
-    aspect-ratio: 5/ 7;
-    background-image: url(${vertical});
+  @media screen and (min-width: ${breakpoints.md}) {
+    aspect-ratio: 16 / 9;
+    background-image: url(${horizaontal});
   }
 `;
 
 const Image = styled.img`
   max-width: 650px;
-  width: 45vw;
-
-  @media screen and (max-width: ${breakpoints.md}) {
-    width: 60vw;
+  width: 60vw;
+  @media screen and (min-width: ${breakpoints.md}) {
+    width: 45vw;
   }
 `;
 
