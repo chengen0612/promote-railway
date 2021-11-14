@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import { breakpoints } from "../styles/theme";
+import ImageTitle from "../components/ImageTitle";
+import Subtitle from "../components/Subtitle";
 
 import title01 from "../assets/title01.svg";
 import illustration02 from "../assets/illustration02.png";
@@ -31,7 +33,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   .subtitle {
     align-self: flex-start;
@@ -44,28 +46,6 @@ const Title = styled.div`
       align-self: flex-end;
       transform: translateY(12px) translateX(20px);
     }
-  }
-`;
-
-const TitleImage = styled.img`
-  width: 189px;
-
-  @media screen and (min-width: ${breakpoints.lg}) {
-    width: 252px;
-  }
-`;
-
-const SubTitle = styled.span`
-  padding: 2px 16px;
-  border-radius: 20px;
-  background: ${({ theme }) => theme.color.secondary};
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 900;
-
-  @media screen and (min-width: ${breakpoints.lg}) {
-    padding: 2px 20px;
-    font-size: 1.6rem;
   }
 `;
 
@@ -129,8 +109,8 @@ function AboutUs() {
       <Container>
         <Wrapper>
           <Title>
-            <TitleImage src={title01} alt="title01" />
-            <SubTitle className="subtitle">概要</SubTitle>
+            <ImageTitle image={title01} />
+            <Subtitle>概要</Subtitle>
           </Title>
           <Heading>
             沿線価値向上
