@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Nature, Station, People } from "../components/ClipPath";
 import { BlobWrapper, nature, station, people } from "../styles/blobs";
 import { mixinMediaQuery } from "../styles/mixin";
-import { printMediaQuery } from "../styles/print";
 
 import illustration03 from "../assets/illustration03.png";
 import illustration04 from "../assets/illustration04.png";
@@ -30,23 +29,23 @@ const Container = styled.section`
 `;
 
 const NatureBlob = styled(BlobWrapper)`
-  ${printMediaQuery(nature.figure)}
-  ${printMediaQuery(nature.blob, ".blob")}
-  ${printMediaQuery(nature.illus.young, ".young")}
+  ${mixinMediaQuery(nature.figure)}
+  ${mixinMediaQuery(nature.blob, ".blob")}
+  ${mixinMediaQuery(nature.illus.young, ".young")}
 `;
 
 const StationBlob = styled(BlobWrapper)`
-  ${printMediaQuery(station.figure)};
-  ${printMediaQuery(station.blob, ".blob")};
-  ${printMediaQuery(station.illus.cat, ".cat")};
-  ${printMediaQuery(station.illus.boy, ".boy")};
+  ${mixinMediaQuery(station.figure)};
+  ${mixinMediaQuery(station.blob, ".blob")};
+  ${mixinMediaQuery(station.illus.cat, ".cat")};
+  ${mixinMediaQuery(station.illus.boy, ".boy")};
 `;
 
 const PeopleBlob = styled(BlobWrapper)`
-  ${printMediaQuery(people.figure)};
-  ${printMediaQuery(people.blob, ".blob")};
-  ${printMediaQuery(people.illus.lady, ".lady")};
-  ${printMediaQuery(people.illus.octopus, ".octopus")};
+  ${mixinMediaQuery(people.figure)};
+  ${mixinMediaQuery(people.blob, ".blob")};
+  ${mixinMediaQuery(people.illus.lady, ".lady")};
+  ${mixinMediaQuery(people.illus.octopus, ".octopus")};
 `;
 
 function Gallery() {
