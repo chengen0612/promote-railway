@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { breakpoints } from "../styles/theme";
 
 const Button = styled.button`
@@ -19,21 +19,22 @@ const Button = styled.button`
   }
 `;
 
-const strokeStyles = {
-  width: "18px",
-  height: "1px",
-  background: ({ theme }) => theme.color.secondary,
-};
+const strokeStyles = css`
+  width: 18px;
+  height: 1px;
+  background: ${({ theme }) => theme.color.secondary};
+`;
 
-const createPseudoStroke = (vertical) => ({
-  ...strokeStyles,
-  content: `""`,
-  position: "absolute",
-  left: "0px",
-  [vertical]: "6px",
-  background: ({ theme }) => theme.color.secondary,
-  transition: ({ theme }) => theme.transition.short,
-});
+const createPseudoStroke = (vertical) => css`
+  ${strokeStyles};
+  content: "";
+  position: absolute;
+  left: 0px;
+  ${vertical === "top" && "top: 6px;"};
+  ${vertical === "bottom" && "bottom: 6px;"};
+  background: ${({ theme }) => theme.color.secondary};
+  transition: ${({ theme }) => theme.transition.short};
+`;
 
 const Strokes = styled.div`
   ${strokeStyles};

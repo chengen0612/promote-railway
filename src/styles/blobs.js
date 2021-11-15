@@ -46,7 +46,7 @@ nature.blob = {
 nature.illus.young = {
   sm: css`
     width: 123px;
-    top: -35%;
+    top: -70px;
     right: -12%;
   `,
   md: css`
@@ -56,7 +56,7 @@ nature.illus.young = {
   lg: css`
     min-width: 130px;
     width: 12vw;
-    top: 15%;
+    top: 30px;
     right: -12%;
   `,
   xl: css`
@@ -78,6 +78,7 @@ station.figure = {
   `,
   md: css`
     margin-top: 210px;
+    margin-left: 25%;
     width: 450px;
   `,
   lg: css`
@@ -123,7 +124,7 @@ station.illus.cat = {
   lg: css`
     width: 15vw;
     min-width: 128px;
-    top: -63px;
+    top: -90px;
     left: 40%;
   `,
   xl: css`
@@ -147,11 +148,12 @@ station.illus.boy = {
   lg: css`
     min-width: 254px;
     width: 28vw;
-    top: 243px;
+    top: 210px;
     left: -10%;
   `,
   xl: css`
     width: 412px;
+    top: 243px;
   `,
 };
 
@@ -178,8 +180,8 @@ people.figure = {
     width: 32vw;
   `,
   xl: css`
-    margin-top: 12%;
-    margin-left: 50%;
+    margin-top: 14%;
+    margin-left: 60%;
     width: 491px;
   `,
 };

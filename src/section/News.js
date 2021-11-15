@@ -10,8 +10,18 @@ import title02 from "../assets/title02.svg";
 import datas from "../datas/news.json";
 
 const Container = styled.section`
+  margin-top: 320px;
   padding-left: 48px;
   padding-right: 48px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    margin-top: 38vh;
+  }
+  @media screen and (min-width: ${breakpoints.lg}) {
+    margin-top: 30vw;
+  }
+  @media screen and (min-width: ${breakpoints.xl}) {
+    margin-top: 500px;
+  }
 `;
 
 const Title = styled.h2`
@@ -45,7 +55,8 @@ function News() {
         <Subtitle>お知らせ</Subtitle>
       </Title>
       <FlexBox>
-        {datas && datas.map((data, i) => <NewsCard key={data.id} data={data} />)}
+        {datas &&
+          datas.map((data) => <NewsCard key={data.id} data={data} />)}
       </FlexBox>
     </Container>
   );

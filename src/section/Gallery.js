@@ -16,14 +16,14 @@ import blob02 from "../assets/blob02.svg";
 import blob03 from "../assets/blob03.svg";
 
 const Container = styled.section`
-  height: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1444px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   ${mixinMediaQuery({
-    sm: "margin-top: 50px",
-    md: "margin-top: unset",
+    sm: "margin-top: 80px",
     lg: "margin-top: -15px",
     xl: "margin-top: -45px",
   })}

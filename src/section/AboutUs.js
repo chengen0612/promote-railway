@@ -10,7 +10,7 @@ import illustration02 from "../assets/illustration02.png";
 import ahead from "../assets/ahead.svg";
 
 const Container = styled.section`
-  margin: 190px auto unset;
+  margin: 190px auto auto;
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
@@ -92,14 +92,18 @@ const Description = styled.p`
 `;
 
 const Link = styled.a`
-  margin-top: 30px;
+  margin-top: 4rem;
   display: inline-block;
   padding-bottom: 6px;
+  border-bottom: 2px solid ${({ theme }) => theme.color.secondary};
+  font-size: 1.2rem;
   letter-spacing: 5px;
-  border-bottom: 1.5px solid ${({ theme }) => theme.color.secondary};
   vertical-align: middle;
   img {
     margin-left: 3rem;
+  }
+  @media screen and (min-width: ${breakpoints.lg}) {
+    font-size: 1.4rem;
   }
 `;
 

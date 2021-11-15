@@ -10,15 +10,19 @@ const Header = styled.header`
   width: 100%;
   position: fixed;
   background: ${({ theme }) => theme.color.background};
+  box-shadow: ${({ theme }) => theme.shadow.light};
+  z-index: 2;
 `;
 
 const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 2rem;
+  max-width: 1600px;
   height: ${({ theme }) => theme.height.navbar.md};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   @media screen and (min-width: ${breakpoints.lg}) {
     height: ${({ theme }) => theme.height.navbar.lg};
   }
