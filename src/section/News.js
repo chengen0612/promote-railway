@@ -2,26 +2,27 @@ import React from "react";
 import styled from "styled-components";
 
 import { breakpoints } from "../styles/theme";
+import { mixinMediaQuery } from "../styles/mixin";
 import ImageTitle from "../components/ImageTitle";
 import Subtitle from "../components/Subtitle";
 import NewsCard from "../components/NewsCard";
 
 import title02 from "../assets/title02.svg";
 import datas from "../datas/news.json";
+import RedirectBtn from "../components/RedirectBtn";
 
 const Container = styled.section`
   margin-top: 320px;
   padding-left: 48px;
   padding-right: 48px;
-  @media screen and (min-width: ${breakpoints.md}) {
-    margin-top: 38vh;
+  > .btn {
+    margin-top: 40px;
   }
-  @media screen and (min-width: ${breakpoints.lg}) {
-    margin-top: 30vw;
-  }
-  @media screen and (min-width: ${breakpoints.xl}) {
-    margin-top: 500px;
-  }
+  ${mixinMediaQuery({
+    md: 'margin-top: 38vh;',
+    lg: 'margin-top: 30vw;',
+    xl: 'margin-top: 500px;'
+  })}
 `;
 
 const Title = styled.h2`
@@ -58,6 +59,7 @@ function News() {
         {datas &&
           datas.map((data) => <NewsCard key={data.id} data={data} />)}
       </FlexBox>
+      <RedirectBtn>すべてのお知らせを見る</RedirectBtn>
     </Container>
   );
 }
