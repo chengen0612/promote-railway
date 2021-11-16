@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { breakpoints } from "../styles/theme";
+import Container from "../components/Container";
 import ImageTitle from "../components/ImageTitle";
 import Subtitle from "../components/Subtitle";
 
@@ -9,12 +10,9 @@ import title01 from "../assets/title01.svg";
 import illustration02 from "../assets/illustration02.png";
 import ahead from "../assets/ahead.svg";
 
-const Container = styled.section`
-  margin: 190px auto auto;
-  padding-left: 30px;
-  padding-right: 30px;
+const StyledContainer = styled(Container)`
+  margin-top: 190px;
   position: relative;
-  overflow: hidden;
 
   @media screen and (min-width: ${breakpoints.sm}) {
     margin-top: 58px;
@@ -110,7 +108,7 @@ const Link = styled.a`
 function AboutUs() {
   return (
     <>
-      <Container>
+      <StyledContainer>
         <Wrapper>
           <Title>
             <ImageTitle image={title01} />
@@ -133,7 +131,7 @@ function AboutUs() {
             <img src={ahead} alt="" />
           </Link>
         </Wrapper>
-      </Container>
+      </StyledContainer>
     </>
   );
 }

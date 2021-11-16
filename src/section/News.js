@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { breakpoints } from "../styles/theme";
 import { mixinMediaQuery } from "../styles/mixin";
+import Container from "../components/Container";
 import ImageTitle from "../components/ImageTitle";
 import Subtitle from "../components/Subtitle";
 import NewsCard from "../components/NewsCard";
@@ -11,17 +12,17 @@ import title02 from "../assets/title02.svg";
 import datas from "../datas/news.json";
 import RedirectBtn from "../components/RedirectBtn";
 
-const Container = styled.section`
-  margin-top: 320px;
+const StyledContainer = styled(Container)`
   padding-left: 48px;
   padding-right: 48px;
   > .btn {
     margin-top: 40px;
   }
   ${mixinMediaQuery({
-    md: 'margin-top: 38vh;',
-    lg: 'margin-top: 30vw;',
-    xl: 'margin-top: 500px;'
+    sm: "margin-top: 320px;",
+    md: "margin-top: 38vh;",
+    lg: "margin-top: 30vw;",
+    xl: "margin-top: 500px;",
   })}
 `;
 
@@ -50,17 +51,16 @@ const FlexBox = styled.div`
 
 function News() {
   return (
-    <Container>
+    <StyledContainer>
       <Title>
         <ImageTitle image={title02} />
         <Subtitle>お知らせ</Subtitle>
       </Title>
       <FlexBox>
-        {datas &&
-          datas.map((data) => <NewsCard key={data.id} data={data} />)}
+        {datas && datas.map((data) => <NewsCard key={data.id} data={data} />)}
       </FlexBox>
       <RedirectBtn>すべてのお知らせを見る</RedirectBtn>
-    </Container>
+    </StyledContainer>
   );
 }
 

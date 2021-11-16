@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Container from "../components/Container";
 import { Nature, Station, People } from "../components/ClipPath";
 import { BlobWrapper, nature, station, people } from "../styles/blobs";
 import { mixinMediaQuery } from "../styles/mixin";
@@ -14,9 +15,8 @@ import blob01 from "../assets/blob01.svg";
 import blob02 from "../assets/blob02.svg";
 import blob03 from "../assets/blob03.svg";
 
-const Container = styled.section`
-  margin-left: auto;
-  margin-right: auto;
+const StyledContainer = styled(Container)`
+  padding: unset;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,7 @@ const PeopleBlob = styled(BlobWrapper)`
 
 function Gallery() {
   return (
-    <Container>
+    <StyledContainer>
       <NatureBlob>
         <img className="blob" src={blob01} alt="blob01" />
         <Nature />
@@ -68,7 +68,7 @@ function Gallery() {
         <img className="lady" src={illustration06} alt="illustration06" />
         <img className="octopus" src={illustration07} alt="illustration07" />
       </PeopleBlob>
-    </Container>
+    </StyledContainer>
   );
 }
 
