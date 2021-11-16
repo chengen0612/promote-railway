@@ -111,7 +111,7 @@ function AboutUs() {
       <StyledContainer>
         <Wrapper>
           <Title>
-            <ImageTitle image={title01} />
+            <ImageTitle src={title01} alt="About Us" />
             <Subtitle>概要</Subtitle>
           </Title>
           <Heading>

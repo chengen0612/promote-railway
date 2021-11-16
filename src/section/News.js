@@ -53,7 +53,7 @@ function News() {
   return (
     <StyledContainer>
       <Title>
-        <ImageTitle image={title02} />
+        <ImageTitle src={title02} alt="News" />
         <Subtitle>お知らせ</Subtitle>
       </Title>
       <FlexBox>

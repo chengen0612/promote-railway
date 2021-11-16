@@ -1,18 +1,21 @@
-import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { breakpoints } from "../styles/theme";
+import { mixinMediaQuery } from "../styles/mixin";
 
-const Image = styled.img`
-  height: 42px;
+export default styled.img`
+  ${mixinMediaQuery({
+    sm: "height: 42px;",
+    md: "height: 56px;",
+    lg: "height: 68px;",
+  })}
 
-  @media screen and (min-width: ${breakpoints.lg}) {
-    height: 56px;
-  }
+  ${(props) =>
+    props.large &&
+    css`
+      ${mixinMediaQuery({
+        sm: "height: 64px;",
+        md: "height: 72px;",
+        lg: "height: 91px;",
+      })}
+    `}
 `;
-
-function ImageTitle({ image }) {
-  return <Image src={image} alt={image} />;
-}
-
-export default ImageTitle;
