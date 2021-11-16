@@ -17,10 +17,10 @@ import blob03 from "../assets/blob03.svg";
 const Container = styled.section`
   margin-left: auto;
   margin-right: auto;
-  max-width: 1444px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: clip;
   ${mixinMediaQuery({
     sm: "margin-top: 80px",
     lg: "margin-top: -15px",

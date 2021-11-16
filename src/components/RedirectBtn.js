@@ -30,7 +30,7 @@ const pseudoArrowStyles = css`
 
 const Link = styled.a`
   display: inline-block;
-  width: 355px;
+  width: 100%;
   line-height: 52px;
   background-color: ${({ theme }) => theme.color.secondary};
   box-shadow: ${({ theme }) => theme.shadow.midian};
@@ -45,6 +45,9 @@ const Link = styled.a`
     transform: translateY(10px);
   }
   ${pseudoArrowStyles};
+  @media screen and (min-width: ${breakpoints.sm}) {
+    width: 355px;
+  }
   @media screen and (min-width: ${breakpoints.xl}) {
     line-height: 66px;
     font-size: 1.8rem;

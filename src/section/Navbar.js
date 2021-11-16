@@ -7,8 +7,9 @@ import { NavbarTabs, NavbarDropdown } from "../components/NavbarLists";
 import NavbarMenu from "../components/NavbarMenu";
 
 const Header = styled.header`
-  width: 100%;
   position: fixed;
+  left: 0;
+  right: 0;
   background: ${({ theme }) => theme.color.background};
   box-shadow: ${({ theme }) => theme.shadow.light};
   z-index: 2;
