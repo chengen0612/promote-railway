@@ -43,18 +43,20 @@ const Image = styled.img`
 `;
 
 const Illustration = styled.img`
-  width: 218px;
+  min-width: 218px;
+  width: 26vw;
   position: absolute;
   right: 0px;
-  bottom: -200px;
+  bottom: -210px;
   @media screen and (min-width: ${breakpoints.lg}) {
-    width: 272px;
+    max-width: 349px;
     right: 40px;
+    bottom: -22vw;
   }
   @media screen and (min-width: ${breakpoints.xl}) {
-    width: 399px;
+    max-width: 399px;
     right: 50px;
-    bottom: -460px;
+    bottom: -440px;
   }
 `;
 

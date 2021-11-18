@@ -11,10 +11,12 @@ import illustration02 from "../assets/illustration02.png";
 import ahead from "../assets/ahead.svg";
 
 const StyledContainer = styled(Container)`
-  margin-top: 190px;
+  margin-top: 200px;
   position: relative;
-
   @media screen and (min-width: ${breakpoints.sm}) {
+    margin-top: 150px;
+  }
+  @media screen and (min-width: ${breakpoints.md}) {
     margin-top: 58px;
   }
   @media screen and (min-width: ${breakpoints.lg}) {
@@ -58,22 +60,23 @@ const Heading = styled.h3`
 `;
 
 const Mandarin = styled.img`
-  width: 95px;
+  min-width: 95px;
+  width: 13vw;
   position: absolute;
   top: -60px;
-  left: 240px;
-
-  @media screen and (min-width: ${breakpoints.sm}) {
+  left: 220px;
+  @media screen and (min-width: ${breakpoints.md}) {
+    max-width: 130px;
     top: -10px;
     left: 310px;
   }
   @media screen and (min-width: ${breakpoints.lg}) {
-    width: 119px;
-    top: 15px;
+    max-width: 178px;
+    top: -15px;
     left: 418px;
   }
   @media screen and (min-width: ${breakpoints.xl}) {
-    width: 190px;
+    max-width: 190px;
     top: -50%;
     left: 470px;
   }
