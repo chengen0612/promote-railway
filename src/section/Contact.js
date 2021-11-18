@@ -6,20 +6,29 @@ import Container from "../components/Container";
 import ImageTitle from "../components/ImageTitle";
 import Subtitle from "../components/Subtitle";
 import RedirectBtn from "../components/RedirectBtn";
+import { BlobWrapper } from "../styles/blobs";
+import { Japan } from "../components/ClipPath";
 
 import title05 from "../assets/title05.svg";
 import illustration14 from "../assets/illustration14.png";
 import illustration15 from "../assets/illustration15.png";
+import blob05 from "../assets/blob05.svg";
 
 const StyledContainer = styled(Container)`
-  margin-top: 150px;
+  margin-top: 310px;
+  position: relative;
   overflow-x: clip;
+  @media screen and (min-width: ${breakpoints.md}) {
+    margin-top: 250px;
+  }
   @media screen and (min-width: ${breakpoints.lg}) {
     margin-top: 200px;
   }
 `;
 
 const Title = styled.h2`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,6 +51,8 @@ const WhiteBoard = styled.div`
   border-radius: 30px;
   background-color: #fff;
   box-shadow: ${({ theme }) => theme.shadow.midian};
+  position: relative;
+  z-index: 1;
   .btn {
     margin-top: 40px;
   }
@@ -117,6 +128,36 @@ const Figure = styled.figure`
   }
 `;
 
+const JapanBlob = styled(BlobWrapper)`
+  position: absolute;
+  width: 610px;
+  bottom: 50px;
+  left: -330px;
+  .blob {
+    width: 95%;
+    transform: translateY(10px) rotate(-15deg);
+  }
+  @media screen and (min-width: ${breakpoints.md}) {
+    bottom: 200px;
+  }
+  @media screen and (min-width: ${breakpoints.lg}) {
+    width: 720px;
+    top: -120px;
+    .blob {
+      width: 108%;
+      transform: translate(-60px, -30px);
+    }
+  }
+  @media screen and (min-width: ${breakpoints.xl}) {
+    width: 840px;
+    top: -120px;
+    .blob {
+      width: 105%;
+      transform: translate(-50px, -30px);
+    }
+  }
+`;
+
 function Contact() {
   return (
     <StyledContainer>
@@ -142,6 +183,10 @@ function Contact() {
           <img className="people" src={illustration14} alt="illustration14" />
         </Figure>
       </WhiteBoard>
+      <JapanBlob>
+        <img className="blob" src={blob05} alt="blob05" />
+        <Japan />
+      </JapanBlob>
     </StyledContainer>
   );
 }

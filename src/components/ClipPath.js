@@ -1,10 +1,12 @@
 import scenery01 from "../assets/scenery01.jpg";
 import scenery02 from "../assets/scenery02.jpg";
 import scenery03 from "../assets/scenery03.jpg";
+import scenery04 from "../assets/scenery04.jpg";
+import scenery05 from "../assets/scenery05.jpg";
 
 export const Nature = () => (
   <svg viewBox="0 0 652 368" width="652">
-  {/* height="368" */}
+    {/* height="368" */}
     <clipPath id="nature">
       <path
         d="M873.1,1436.03c125.551-1.19,207.075,22.1,274.995,35,81.16,15.42,151.91,53.58,151.91,152.99S1210.64,1804,1100.41,1804H847.592C737.36,1804,648,1745.52,648,1624.02S747.545,1437.22,873.1,1436.03Z"
@@ -23,7 +25,7 @@ export const Nature = () => (
 
 export const Station = () => (
   <svg viewBox="0 0 813.844 538" width="813.844">
-  {/* height="538" */}
+    {/* height="538" */}
     <clipPath id="station">
       <path
         d="M297.748,1768c-52.31,32.77-149.6,90-149.6,210,0,144.47,112.835,222,293.551,222s218.648-75.32,346.239-85S962,2027.88,962,1957s-139.649-295-391.4-295C385.851,1662,353.78,1732.9,297.748,1768Z"
@@ -42,7 +44,7 @@ export const Station = () => (
 
 export const People = () => (
   <svg viewBox="0 0 504 367" width="504">
-  {/* height="367" */}
+    {/* height="367" */}
     <clipPath id="people">
       <path
         d="M1091.4,1891.18c-67.91,16.79-144.4,63.55-144.4,162.91s72.36,156.32,154.65,168.92S1283.31,2238,1283.31,2238c92.61,0,167.69-50.45,167.69-171.91C1451,1863.62,1271.27,1846.71,1091.4,1891.18Z"
@@ -55,6 +57,44 @@ export const People = () => (
       clip-path="url(#people)"
       preserveAspectRatio="xMidYMid slice"
       href={scenery03}
+    />
+  </svg>
+);
+
+export const Harbor = () => (
+  <svg viewBox="0 0 504 367" width="504">
+    {/* height="367" */}
+    <clipPath id="harbor">
+      <path
+        d="M1144.4,5248.18c-67.91,16.79-144.4,63.55-144.4,162.91s72.36,156.32,154.65,168.92S1336.31,5595,1336.31,5595c92.61,0,167.69-50.45,167.69-171.91C1504,5220.62,1324.27,5203.71,1144.4,5248.18Z"
+        transform="translate(-1000 -5228)"
+      ></path>
+    </clipPath>
+    <image
+      width="100%"
+      height="100%"
+      clip-path="url(#harbor)"
+      preserveAspectRatio="xMidYMid slice"
+      href={scenery04}
+    />
+  </svg>
+);
+
+export const Japan = () => (
+  <svg viewBox="0 0 813.844 538" width="813.844">
+    {/* height="538" */}
+    <clipPath id="japan">
+      <path
+        d="M149.748,5259C97.439,5291.77.15,5349,.15,5469c0,144.47,112.835,222,293.551,222s218.648-75.32,346.239-85S814,5518.88,814,5448s-139.649-295-391.4-295C237.852,5153,205.78,5223.9,149.748,5259Z"
+        transform="translate(-0.156 -5153)"
+      ></path>
+    </clipPath>
+    <image
+      width="100%"
+      height="100%"
+      clip-path="url(#japan)"
+      preserveAspectRatio="xMidYMid slice"
+      href={scenery05}
     />
   </svg>
 );
