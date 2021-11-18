@@ -38,7 +38,6 @@ nature.figure = {
 
 nature.blob = {
   sm: css`
-    top: 3%;
     right: -5%;
   `,
 };
@@ -73,12 +72,12 @@ station.illus = {};
 station.figure = {
   sm: css`
     margin-top: 165px;
-    margin-left: 30%;
+    margin-left: 35vw;
     width: 375px;
   `,
   md: css`
     margin-top: 210px;
-    margin-left: 25%;
+    margin-left: 25vw;
     width: 450px;
   `,
   lg: css`
@@ -96,17 +95,14 @@ station.figure = {
 
 station.blob = {
   sm: css`
-    top: 10%;
     left: -15%;
     transform: rotate(5deg) scale(0.9);
   `,
   md: css`
-    top: 5%;
     transform: scale(0.9);
   `,
   lg: css`
-    top: unset;
-    left: -5%;
+    transform: rotate(10deg) scale(0.85);
   `,
 };
 
@@ -148,7 +144,7 @@ station.illus.boy = {
   lg: css`
     min-width: 254px;
     width: 28vw;
-    top: 210px;
+    top: 16vw;
     left: -10%;
   `,
   xl: css`
@@ -166,7 +162,7 @@ people.illus = {};
 people.figure = {
   sm: css`
     margin-top: 280px;
-    margin-left: -2%;
+    margin-left: 2vw;
     width: 252px;
   `,
   md: css`
@@ -180,15 +176,14 @@ people.figure = {
     width: 32vw;
   `,
   xl: css`
-    margin-top: 14%;
-    margin-left: 60%;
+    margin-top: 13%;
+    margin-left: 50%;
     width: 491px;
   `,
 };
 
 people.blob = {
   sm: css`
-    top: -3%;
     right: -12%;
     transform: rotate(-15deg) scale(0.9);
   `,

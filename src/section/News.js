@@ -20,14 +20,13 @@ const StyledContainer = styled(Container)`
   }
   ${mixinMediaQuery({
     sm: "margin-top: 320px;",
-    md: "margin-top: 38vh;",
-    lg: "margin-top: 30vw;",
+    md: "margin-top: 370px;",
+    lg: "margin-top: 32vw;",
     xl: "margin-top: 500px;",
   })}
 `;
 
 const Title = styled.h2`
-  margin-bottom: 40px;
   text-align: center;
   .subtitle {
     display: inline-block;
@@ -36,6 +35,7 @@ const Title = styled.h2`
 `;
 
 const FlexBox = styled.div`
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   max-width: 494px;
@@ -43,6 +43,7 @@ const FlexBox = styled.div`
   flex-direction: column;
   row-gap: 40px;
   @media screen and (min-width: ${breakpoints.lg}) {
+    margin-top: 50px;
     max-width: 1400px;
     flex-direction: row;
     column-gap: 25px;

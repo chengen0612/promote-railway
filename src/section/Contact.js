@@ -74,13 +74,13 @@ const Figure = styled.figure`
   }
   .manju {
     width: 104px;
-    left: -20px;
-    bottom: -125px;
+    left: -5px;
+    bottom: -135px;
   }
   .people {
     width: 278px;
     right: -35px;
-    bottom: -530px;
+    bottom: -540px;
   }
   @media screen and (min-width: ${breakpoints.md}) {
     .manju {
@@ -96,7 +96,7 @@ const Figure = styled.figure`
   @media screen and (min-width: ${breakpoints.lg}) {
     .manju {
       width: 130px;
-      left: 8px;
+      left: 10px;
       bottom: -150px;
     }
     .people {

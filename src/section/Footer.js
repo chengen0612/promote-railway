@@ -5,13 +5,10 @@ import { breakpoints } from "../styles/theme";
 import image from "../assets/footer.png";
 
 const Container = styled.footer`
-  margin-top: 100px;
+  margin-top: 60px;
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-  @media screen and (min-width: ${breakpoints.lg}) {
-    margin-top: 80px;
-  }
 `;
 
 const Image = styled.img`

@@ -17,9 +17,11 @@ const iframeLinks = [
 
 const StyledContainer = styled(Container)`
   margin-top: 100px;
-  margin-bottom: 300px;
   .btn {
     margin-top: 80px;
+  }
+  @media screen and (min-width: ${breakpoints.lg}) {
+    margin-top: 150px;
   }
 `;
 
@@ -27,7 +29,7 @@ const Heading = styled.h2`
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 15px;
+  row-gap: 25px;
   > .intro {
     max-width: 780px;
     font-size: 1.6rem;

@@ -23,8 +23,8 @@ const StyledContainer = styled(Container)`
   overflow-x: clip;
   ${mixinMediaQuery({
     sm: "margin-top: 80px",
-    lg: "margin-top: -15px",
-    xl: "margin-top: -45px",
+    md: "margin-top: 50px",
+    lg: "margin-top: -30px",
   })}
 `;
 

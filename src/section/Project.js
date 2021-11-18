@@ -21,6 +21,7 @@ const StyledContainer = styled(Container)`
     padding-right: 4vw;
   }
   @media screen and (min-width: ${breakpoints.xl}) {
+    margin-top: 250px;
     padding-left: 3vw;
     padding-right: 3vw;
   }
@@ -36,54 +37,51 @@ const Figure = styled.figure`
     max-width: 210px;
     min-width: 140px;
     width: 20vw;
-    transform: translate(30%, 60%);
+    transform: translate(40%, 40%);
   }
   .fish {
     max-width: 108px;
     min-width: 77px;
     width: 11vw;
-    transform: translate(30%, -30%);
+    transform: translate(-5%, -50%);
   }
   .engineer {
     max-width: 230px;
     min-width: 168px;
     width: 24vw;
-    transform: translate(-10%, 10%);
+    transform: translate(-25%, -3%);
   }
   @media screen and (min-width: ${breakpoints.md}) {
     .train {
-      transform: translate(-20%, 120%);
+      transform: translate(-15%, 75%);
     }
     .fish {
-      transform: translate(100%, 40%);
+      transform: translate(70%, -20%);
     }
     .engineer {
-      transform: translate(50%, 35%);
+      transform: translate(25%, 35%);
     }
   }
   @media screen and (min-width: ${breakpoints.lg}) {
     .train {
-      transform: translate(-10%, 65%);
+      transform: translate(-15%, 45%);
     }
     .fish {
-      transform: translate(100%, 15%);
+      transform: translate(95%, -15%);
     }
     .engineer {
-      transform: translate(75%, 35%);
+      transform: translate(30%, 15%);
     }
   }
   @media screen and (min-width: ${breakpoints.xl}) {
     .train {
       max-width: 246px;
-      transform: translate(-50%, 95%);
     }
     .fish {
       max-width: 136px;
-      transform: translate(60%, 35%);
     }
     .engineer {
       max-width: 293px;
-      transform: translate(50%, 35%);
     }
   }
 `;

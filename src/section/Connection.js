@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { breakpoints } from "../styles/theme";
+import { mixinMediaQuery } from "../styles/mixin";
 import Container from "../components/Container";
 
 import link01 from "../assets/link01.jpeg";
@@ -27,10 +28,11 @@ const AffiliatedCompanies = [
 ];
 
 const StyledContainer = styled(Container)`
-  margin-top: 480px;
-  @media screen and (min-width: ${breakpoints.lg}) {
-    margin-top: 400px;
-  }
+  ${mixinMediaQuery({
+    sm: 'margin-top: 520px;',
+    md: 'margin-top: 460px;',
+    lg: 'margin-top: 420px;'
+  })}
 `;
 
 const GridBox = styled.aside`
