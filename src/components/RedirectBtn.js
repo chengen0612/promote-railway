@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 
 import { breakpoints } from "../styles/theme";
 
-import primaryArrow from "../assets/arrow-primary.svg";
-import whiteArrow from "../assets/arrow-white.svg";
+import primaryArrow from "../assets/icons/arrow-primary.svg";
+import whiteArrow from "../assets/icons/arrow-white.svg";
 
 const Container = styled.div`
   text-align: center;

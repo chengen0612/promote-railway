@@ -1,7 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+
 import { breakpoints } from "../styles/theme";
-import arrow from "../assets/arrow.svg";
+
+import arrow from "../assets/icons/arrow.svg";
 
 const float = keyframes`
   0, 100% {
