@@ -7,18 +7,24 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body, ul {
-    margin: 0;
-    padding: 0;
-  }
-
   html {
     font-size: 10px;
   }
 
+  body, ul, figure, p {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
-    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ${({ theme }) => theme.breakpoints.xl};
+    font-family: "Noto Sans JP", "Lucida Grande", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", "Meiryo UI", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 1.4rem;
+    font-weight: 500;
+    color: ${({ theme }) => theme.color.secondary};
+    background: ${({ theme }) => theme.color.chiffon};
   }
 
   ul {
@@ -28,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: unset;
+    cursor: pointer;
   }
 
   button {
