@@ -1,60 +1,80 @@
 import React from "react";
 import styled, { css } from "styled-components";
+
 import { breakpoints } from "../styles/theme";
 
-const Button = styled.button`
-  &:hover div {
-    background: transparent;
-    &:before {
-      top: 0;
-      transform: rotate(135deg);
-    }
-    &:after {
-      bottom: 0;
-      transform: rotate(-135deg);
-    }
-  }
+const List = styled.ul`
+  display: none;
   @media screen and (min-width: ${breakpoints.lg}) {
-    display: none;
+    display: flex;
+    li > a {
+      padding: 30px 15px;
+      font-size: 1.5rem;
+      font-weight: 900;
+      transition: ${({ theme }) => theme.transition.short};
+      :hover {
+        color: ${({ theme }) => theme.color.primary};
+      }
+    }
+  }
+  @media screen and (min-width: ${breakpoints.xl}) {
+    li > a {
+      padding: 30px;
+    }
   }
 `;
 
-const strokeStyles = css`
-  width: 18px;
-  height: 1px;
-  background: ${({ theme }) => theme.color.secondary};
-`;
-
-const createPseudoStroke = (vertical) => css`
-  ${strokeStyles};
-  content: "";
+const DropdownList = styled.ul`
+  padding-top: 30px;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  left: 0px;
-  ${vertical === "top" && "top: 6px;"};
-  ${vertical === "bottom" && "bottom: 6px;"};
-  background: ${({ theme }) => theme.color.secondary};
-  transition: ${({ theme }) => theme.transition.short};
+  background: ${({ theme }) => theme.color.background};
+  text-align: center;
+  font-weight: 900;
+
+  top: -100vh;
+  transition: 0.8s ease-in-out;
+
+  li > a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+    transition: ${({ theme }) => theme.transition.short};
+    :hover {
+      color: ${({ theme }) => theme.color.primary};
+    }
+  }
+
+  ${(props) =>
+    props.visible &&
+    css`
+      top: ${({ theme }) => theme.height.navbar.md};
+    `}
 `;
 
-const Strokes = styled.div`
-  ${strokeStyles};
-  margin: 20px auto 10px;
-  position: relative;
-  &:before {
-    ${createPseudoStroke("top")}
-  }
-  &:after {
-    ${createPseudoStroke("bottom")}
-  }
-`;
+const pageNames = [
+  "沿線価値向上プロジェクトとは",
+  "お知らせ",
+  "プロジェクト事例紹介",
+  "note",
+  "お問い合わせ",
+];
 
-function NavbarMenu() {
-  return (
-    <Button>
-      <Strokes></Strokes>
-      <span>MENU</span>
-    </Button>
-  );
-}
+const listItems = pageNames.map((name, i) => (
+  <li key={i}>
+    <a href="/">{name}</a>
+  </li>
+));
 
-export default NavbarMenu;
+export const Menu = () => (
+  <nav>
+    <List>{listItems}</List>
+  </nav>
+);
+
+export const DropdownMenu = (props) => (
+  <nav>
+    <DropdownList {...props}>{listItems}</DropdownList>
+  </nav>
+);

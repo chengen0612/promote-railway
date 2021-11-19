@@ -1,18 +1,25 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
+
 import { breakpoints } from "../styles/theme";
+import { Menu, DropdownMenu } from "../components/NavbarMenu";
+import HamburgerBtn from "../components/HamburgerBtn";
+
 import logo from "../assets/logo.svg";
 import slogan from "../assets/logo-slogan.svg";
-import { NavbarTabs, NavbarDropdown } from "../components/NavbarLists";
-import NavbarMenu from "../components/NavbarMenu";
 
 const Header = styled.header`
   position: fixed;
   left: 0;
   right: 0;
   background: ${({ theme }) => theme.color.background};
-  box-shadow: ${({ theme }) => theme.shadow.light};
   z-index: 2;
+
+  ${(props) =>
+    props.shadow &&
+    css`
+      box-shadow: ${({ theme }) => theme.shadow.light};
+    `}
 `;
 
 const Container = styled.div`
@@ -21,6 +28,8 @@ const Container = styled.div`
   padding: 0 2rem;
   max-width: 1600px;
   height: ${({ theme }) => theme.height.navbar.md};
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,10 +42,10 @@ const Group = styled.div`
   display: flex;
   align-items: center;
   column-gap: 2rem;
-  & a img {
+  a img {
     transition: ${({ theme }) => theme.transition.short};
   }
-  & a:hover img {
+  a:hover img {
     filter: opacity(0.85);
   }
 `;
@@ -62,9 +71,19 @@ const Slogan = styled.img`
 `;
 
 function Navbar() {
+  const [isDropDownShowing, setIsDropDownShowing] = useState(false);
+
+  const handleScroller = () => {
+    document.body.style.overflow = isDropDownShowing ? "auto" : "hidden";
+  };
+  const toggleDropdownMenu = () => {
+    setIsDropDownShowing(!isDropDownShowing);
+    handleScroller();
+  };
+
   return (
     <>
-      <Header>
+      <Header shadow={!isDropDownShowing}>
         <Container>
           <Group>
             <a href="/">
@@ -74,10 +93,13 @@ function Navbar() {
               <Slogan src={slogan} alt="slogan" />
             </a>
           </Group>
-          <NavbarTabs />
-          <NavbarMenu />
+          <Menu />
+          <HamburgerBtn
+            handler={toggleDropdownMenu}
+            isCross={isDropDownShowing}
+          />
         </Container>
-        {/* <NavbarDropdown /> */}
+        <DropdownMenu visible={isDropDownShowing} />
       </Header>
     </>
   );
