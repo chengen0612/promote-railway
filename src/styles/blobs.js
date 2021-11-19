@@ -1,15 +1,4 @@
-import styled, { css } from "styled-components";
-
-export const BlobWrapper = styled.figure`
-  position: relative;
-  * {
-    position: absolute;
-  }
-  svg,
-  .blob {
-    width: 100%;
-  }
-`;
+import { css } from "styled-components";
 
 // Nature Styles
 const nature = {};
@@ -134,11 +123,12 @@ station.illus.boy = {
   sm: css`
     width: 240px;
     top: 135px;
-    left: -35%;
+    left: -25vw;
     z-index: 1;
   `,
   md: css`
     width: 286px;
+    left: -40%;
     top: 134px;
   `,
   lg: css`
