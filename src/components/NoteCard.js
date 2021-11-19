@@ -29,7 +29,6 @@ const Iframe = styled.iframe`
 `;
 
 function NoteCard({ link }) {
-  console.log(link);
   return (
     <Card>
       <Wrapper>
