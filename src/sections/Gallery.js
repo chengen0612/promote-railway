@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 import { mixinMediaQuery } from "../styles/mixin";
 import Container from "../components/Container";
+import BlobWrapper from "../components/BlobWrapper";
 import { Nature, Station, People } from "../components/ClipPath";
-import { BlobWrapper, nature, station, people } from "../styles/blobs";
+import { nature, station, people } from "../styles/blobs";
 
 import illustration03 from "../assets/illustration03.png";
 import illustration04 from "../assets/illustration04.png";

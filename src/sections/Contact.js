@@ -6,7 +6,7 @@ import Container from "../components/Container";
 import ImageTitle from "../components/ImageTitle";
 import Subtitle from "../components/Subtitle";
 import RedirectBtn from "../components/RedirectBtn";
-import { BlobWrapper } from "../styles/blobs";
+import BlobWrapper from "../components/BlobWrapper";
 import { Japan } from "../components/ClipPath";
 
 import title05 from "../assets/title05.svg";

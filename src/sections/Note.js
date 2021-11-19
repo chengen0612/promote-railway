@@ -6,7 +6,7 @@ import Container from "../components/Container";
 import ImageTitle from "../components/ImageTitle";
 import NoteCard from "../components/NoteCard";
 import RedirectBtn from "../components/RedirectBtn";
-import { BlobWrapper } from "../styles/blobs";
+import BlobWrapper from "../components/BlobWrapper";
 import { Harbor } from "../components/ClipPath";
 
 import illustration11 from "../assets/illustration11.png";
